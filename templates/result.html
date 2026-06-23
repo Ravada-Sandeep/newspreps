@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Search Result</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+
+            <div class="card shadow">
+
+                <div class="card-body text-center">
+
+                    <h2 class="mb-4 text-success">
+                        Newspaper Found my dear
+                    </h2>
+
+                    <p class="fs-5">
+                        <strong>Date:</strong>
+                        {{ newspaper["newspaper_date"] }}
+                    </p>
+
+                    <a href="{{ newspaper['pdf_url'] }}"
+   target="_blank"
+   class="btn btn-primary w-100 mb-3">
+
+    📖 Open Newspaper
+
+</a>
+<form
+    action="/delete-newspaper/{{ newspaper['id'] }}"
+    method="POST">
+
+    <button
+        type="submit"
+        class="btn btn-danger w-100 mb-3">
+
+        🗑 Delete Newspaper
+
+    </button>
+
+</form>
+
+                    <a
+                        href="/search"
+                        class="btn btn-success w-100 mb-3">
+
+                        🔍 Search Again
+
+                    </a>
+
+                    <a
+                        href="/dashboard"
+                        class="btn btn-secondary w-100">
+
+                        Dashboard
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

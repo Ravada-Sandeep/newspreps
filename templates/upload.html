@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Upload Newspaper</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body class="bg-light">
+
+<div class="container">
+
+    <div class="row vh-100 justify-content-center align-items-center">
+
+        <div class="col-md-5">
+
+            <div class="card shadow">
+
+                <div class="card-body p-4">
+
+                    <h2 class="text-center mb-4">
+                        Upload Newspaper
+                    </h2>
+
+                    <form
+                        method="POST"
+                        enctype="multipart/form-data">
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Newspaper Date
+                            </label>
+
+                            <input
+                                type="date"
+                                name="newspaper_date"
+                                class="form-control"
+                                required>
+
+                        </div>
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Select PDF
+                            </label>
+
+                            <input
+                                type="file"
+                                name="pdf_file"
+                                class="form-control"
+                                accept=".pdf"
+                                required>
+
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary w-100">
+
+                            📄 Upload Newspaper
+
+                        </button>
+
+                    </form>
+
+                    <hr>
+
+                    <a href="/dashboard"
+                       class="btn btn-secondary w-100">
+
+                        Dashboard
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
