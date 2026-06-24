@@ -3,6 +3,7 @@ from flask import render_template
 from flask import request
 from flask import redirect
 from flask import session
+import os
 from datetime import datetime
 from supabase import create_client
 from flask import flash
@@ -10,9 +11,9 @@ from flask import flash
 
 app = Flask(__name__)
 
-SUPABASE_URL = "https://pplcuwswxuknirddrgwj.supabase.co"
-SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBwbGN1d3N3eHVrbmlyZGRyZ3dqIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4MjIyNDQ3NiwiZXhwIjoyMDk3ODAwNDc2fQ.yafZJxLZEJ3Z4Cthkd6SiNdHWAwW6lBnaDcoxHN8wH0"
 
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 supabase = create_client(
     SUPABASE_URL,
     SUPABASE_KEY
